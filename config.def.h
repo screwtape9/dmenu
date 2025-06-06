@@ -16,14 +16,18 @@ static const char *fonts[] = {
 static const char *prompt      = NULL;      /* -p  option; prompt to the left of input field */
 static const char *colors[SchemeLast][2] = {
 	/*     fg         bg       */
-  [SchemeNorm] = { "#96cdfb", "#000000" },
-  [SchemeSel] = { "#1e1d2d", "#96cdfb" },
-  [SchemeOut] = { "#000000", "#00ffff" }
+  [SchemeNorm]          = { "#96cdfb", "#000000" },
+  [SchemeSel]           = { "#1e1d2d", "#96cdfb" },
+	[SchemeSelHighlight]  = { "#f2fe2c", "#005577" },
+	[SchemeNormHighlight] = { "#f28fad", "#000000" },
+  [SchemeOut]           = { "#000000", "#00ffff" }
 };
 
 static const unsigned int alphas[SchemeLast][2] = {
 	[SchemeNorm] = { OPAQUE, alpha },
 	[SchemeSel] = { OPAQUE, alpha },
+	[SchemeSelHighlight] = { OPAQUE, alpha },
+	[SchemeNormHighlight] = { OPAQUE, alpha },
 	[SchemeOut] = { OPAQUE, alpha }
 };
 /* -l option; if nonzero, dmenu uses vertical list with given number of lines */
